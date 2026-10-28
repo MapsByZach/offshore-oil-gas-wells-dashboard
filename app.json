@@ -1,0 +1,208 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-28T15:06:30.726Z",
+  "item": {
+    "title": "Offshore Oil & Gas Wells Dashboard",
+    "subtitle": "Explore well activity, jurisdiction, operators, and drilling types"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "dashboard",
+    "showHeader": true,
+    "theme": {
+      "mode": "dark",
+      "accent": "coral"
+    },
+    "layout": {
+      "header": {
+        "hidden": false,
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "kpi",
+            "id": "well-count",
+            "title": "Total Wells",
+            "source": {
+              "layerId": "1a18317cad7-layer-3",
+              "scope": "layer"
+            },
+            "statistic": "count",
+            "description": "All records in the layer",
+            "autoPoll": false
+          }
+        ]
+      },
+      "left": {
+        "hidden": false,
+        "width": "370px",
+        "title": "Explore Wells",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "selector",
+            "id": "jurisdiction-filter",
+            "title": "Filter by jurisdiction",
+            "source": {
+              "layerId": "1a18317cad7-layer-3"
+            },
+            "field": "jurisdiction",
+            "control": "dropdown",
+            "limit": 100
+          },
+          {
+            "type": "chart",
+            "id": "well-status-chart",
+            "title": "Wells by status",
+            "source": {
+              "layerId": "1a18317cad7-layer-3",
+              "scope": "layer"
+            },
+            "groupBy": "wellstatusdescription",
+            "statistic": "count",
+            "shape": "bar",
+            "limit": 10,
+            "autoPoll": false
+          },
+          {
+            "type": "chart",
+            "id": "well-type-chart",
+            "title": "Wells by type",
+            "source": {
+              "layerId": "1a18317cad7-layer-3",
+              "scope": "layer"
+            },
+            "groupBy": "welltypedescription",
+            "statistic": "count",
+            "shape": "donut",
+            "limit": 6,
+            "autoPoll": false
+          }
+        ]
+      },
+      "right": {
+        "hidden": false,
+        "width": "360px",
+        "title": "Selected well",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "well-details",
+            "title": "Feature information"
+          },
+          {
+            "type": "chart",
+            "id": "jurisdiction-overview",
+            "title": "Wells by jurisdiction",
+            "source": {
+              "layerId": "1a18317cad7-layer-3",
+              "scope": "layer"
+            },
+            "groupBy": "jurisdiction",
+            "statistic": "count",
+            "shape": "bar",
+            "limit": 8,
+            "autoPoll": false
+          },
+          {
+            "type": "chart",
+            "id": "operator-chart",
+            "title": "Top operators",
+            "source": {
+              "layerId": "1a18317cad7-layer-3",
+              "scope": "layer"
+            },
+            "groupBy": "operator",
+            "statistic": "count",
+            "shape": "bar",
+            "limit": 10,
+            "autoPoll": false
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "title": "Map legend",
+        "config": {}
+      },
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "scale-bar",
+        "type": "scaleBar",
+        "slot": "bottom-right",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "well-feature-details",
+        "label": "Selected well information",
+        "bundlePath": "./runtime/behaviors/well-feature-details-f55f5faa0a2bc7c6.js",
+        "sourceSha256": "f55f5faa0a2bc7c6a266674f2751281e792ca9502988d3f68253fa8dbc9949b4",
+        "modulePaths": [],
+        "config": {
+          "layerId": "1a18317cad7-layer-3"
+        },
+        "mounts": [
+          "well-details"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [
+          {
+            "id": "well-feature-click",
+            "trigger": {
+              "type": "feature-click",
+              "layerId": "1a18317cad7-layer-3"
+            },
+            "actionId": "show-well-details"
+          }
+        ],
+        "installedAt": "2026-10-28T15:19:35.620Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "b446151d-ce4c-4728-82b8-05317e13a7be",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-6c7f700a-f65d-43f4-864c-1752a9073d02",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-28T15:06:30.723Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}

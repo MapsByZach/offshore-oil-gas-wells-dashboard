@@ -1,0 +1,18 @@
+{
+  "kind": "arcgis-nova-deployable-app",
+  "version": "0.1",
+  "generatedAt": "2026-10-28T15:06:30.723Z",
+  "title": "Offshore Oil & Gas Wells Dashboard",
+  "authMode": "oauth",
+  "entry": "index.html",
+  "sourceAppPath": "outputs/apps/2026-10-28T15-06-30-b446151d-ce4c-4728-82b8-05317e13a7be/index.html",
+  "files": {
+    "app": "app.json",
+    "map": "map.json",
+    "runtime": "app.js",
+    "auth": "standalone-auth.js"
+  },
+  "portalUrl": "https://www.arcgis.com",
+  "appId": "hde5KekGd24qqhqG",
+  "deploymentUrl": "https://mapsbyzach.github.io/offshore-oil-gas-wells-dashboard/"
+}

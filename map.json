@@ -1,0 +1,140 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a18317cad7-layer-3",
+      "title": "Offshore Oil and Gas Wells",
+      "url": "https://services6.arcgis.com/SdBwj74JF24xKhpX/arcgis/rest/services/Offshore_Oil_and_Gas_Wells/FeatureServer/0",
+      "itemId": "348f099f7f144f48b1d4bf8deb7d3202",
+      "layerType": "ArcGISFeatureLayer",
+      "blendMode": "normal",
+      "popupInfo": {
+        "popupElements": [
+          {
+            "type": "fields",
+            "fieldInfos": [
+              {
+                "fieldName": "apinumber",
+                "isEditable": true,
+                "label": "apinumber",
+                "visible": true
+              },
+              {
+                "fieldName": "wellstatusdescription",
+                "isEditable": true,
+                "label": "wellstatusdescription",
+                "visible": true
+              },
+              {
+                "fieldName": "welltypedescription",
+                "isEditable": true,
+                "label": "welltypedescription",
+                "visible": true
+              },
+              {
+                "fieldName": "operator",
+                "isEditable": true,
+                "label": "operator",
+                "visible": true
+              },
+              {
+                "fieldName": "jurisdiction",
+                "isEditable": true,
+                "label": "jurisdiction",
+                "visible": true
+              },
+              {
+                "fieldName": "sourcerecord",
+                "isEditable": true,
+                "label": "sourcerecord",
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "fieldInfos": [
+          {
+            "fieldName": "apinumber",
+            "isEditable": true,
+            "label": "apinumber",
+            "visible": true
+          },
+          {
+            "fieldName": "wellstatusdescription",
+            "isEditable": true,
+            "label": "wellstatusdescription",
+            "visible": true
+          },
+          {
+            "fieldName": "welltypedescription",
+            "isEditable": true,
+            "label": "welltypedescription",
+            "visible": true
+          },
+          {
+            "fieldName": "operator",
+            "isEditable": true,
+            "label": "operator",
+            "visible": true
+          },
+          {
+            "fieldName": "jurisdiction",
+            "isEditable": true,
+            "label": "jurisdiction",
+            "visible": true
+          },
+          {
+            "fieldName": "sourcerecord",
+            "isEditable": true,
+            "label": "sourcerecord",
+            "visible": true
+          }
+        ],
+        "title": "Offshore well {apinumber}"
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "world-hillshade-layer",
+        "showLegend": false,
+        "opacity": 1,
+        "title": "World Hillshade",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+        "visibility": true,
+        "layerType": "ArcGISTiledMapServiceLayer"
+      },
+      {
+        "id": "topo-vector-base-layer",
+        "opacity": 1,
+        "title": "World Topo",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -19721736.93244521,
+        "ymin": -15809459.202251237,
+        "xmax": 19837774.561708357,
+        "ymax": 12816798.848356636
+      }
+    }
+  }
+}
